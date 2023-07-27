@@ -8,7 +8,7 @@ Puis activer ingress-nginx pour les redirection avec ingress
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
 ```
 
-# lancer & supprmer rapidement
+# Lancer & supprmer rapidement
 
 ```bash
 ./start.sh # pour lancer
@@ -113,7 +113,7 @@ spec:
         - containerPort: 80
 ```
 
-# Start
+# Lancer
 
 On commence par build nos images docker (tp3-web1 et tp3-web2).
 
@@ -149,7 +149,7 @@ echo "Services:"
 kubectl get service
 ```
 
-## Stop / suppression
+## Stopper / suppression
 
 On supprime ici nos ingress, services et deployments
 
