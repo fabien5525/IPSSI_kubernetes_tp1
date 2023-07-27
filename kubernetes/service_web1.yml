@@ -1,0 +1,18 @@
+# create a service that will be used by the ingress (port 80, type NodePort)
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: tp3-web1
+  labels:
+    app: tp3-web1
+
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: tp3-web1

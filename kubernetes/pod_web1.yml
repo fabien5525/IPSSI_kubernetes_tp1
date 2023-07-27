@@ -1,0 +1,17 @@
+# create pod.yml that will be used by the ingress, with ImagePullPolicy never
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: pod-tp3-web1
+  labels:
+    app: pod-tp3-web1
+
+spec:
+  containers:
+
+  - name: container-tp3-web1
+    image: tp3-web1
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 80

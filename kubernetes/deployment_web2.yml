@@ -1,0 +1,24 @@
+# create a deployment that will be used by the ingress
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: tp3-web2
+  labels:
+    app: tp3-web2
+
+spec:
+  selector:
+    matchLabels:
+      app: tp3-web2
+  template:
+    metadata:
+      labels:
+        app: tp3-web2
+    spec:
+      containers:
+      - name: tp3-web2
+        image: tp3-web2
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80

@@ -1,0 +1,12 @@
+services:
+  web1:
+    container_name: tp3-web1
+    build: ./docker/web1
+    ports:
+      - "8081:80"
+
+  web2:
+    container_name: tp3-web2
+    build: ./docker/web2
+    ports:
+      - "8082:80"
